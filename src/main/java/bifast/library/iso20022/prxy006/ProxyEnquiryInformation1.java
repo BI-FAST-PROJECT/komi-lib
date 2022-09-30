@@ -8,13 +8,9 @@
 
 package bifast.library.iso20022.prxy006;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
 
@@ -70,17 +66,23 @@ public class ProxyEnquiryInformation1 {
     protected ProxyEnquiryDefinition1 prxyInf;
     @XmlElement(name = "AcctInf")
     protected ProxyEnquiryAccount1 acctInf;
-    @XmlElement(name = "RegnSts")
+
+/*    @XmlElement(name = "RegnSts")
     protected String regnSts;
     @XmlElement(name = "RegnDtTm")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar regnDtTm;
     @XmlElement(name = "PreAuthrsd")
-    protected Boolean preAuthrsd;
-//    @XmlElement(name = "SplmtryData")
-//    protected List<BISupplementaryDataEnvelope1> splmtryData;
+    protected Boolean preAuthrsd;*/
+
+   //@XmlElement(name = "SplmtryData")
+   // protected List<BISupplementaryDataEnvelope1> splmtryData;
+
+    //@XmlElement(name = "SplmtryData")
+    //protected List<BISupplementaryData1> splmtryData;
+
     @XmlElement(name = "SplmtryData")
-    protected List<BISupplementaryData1> splmtryData;
+    protected BISupplementaryData1 splmtryData;
 
     /**
      * Gets the value of the regnId property.
@@ -210,9 +212,9 @@ public class ProxyEnquiryInformation1 {
      *     {@link String }
      *     
      */
-    public String getRegnSts() {
-        return regnSts;
-    }
+   // public String getRegnSts() {
+     //   return regnSts;
+    //}
 
     /**
      * Sets the value of the regnSts property.
@@ -222,9 +224,9 @@ public class ProxyEnquiryInformation1 {
      *     {@link String }
      *     
      */
-    public void setRegnSts(String value) {
-        this.regnSts = value;
-    }
+    //public void setRegnSts(String value) {
+      //  this.regnSts = value;
+    //}
 
     /**
      * Gets the value of the regnDtTm property.
@@ -234,9 +236,9 @@ public class ProxyEnquiryInformation1 {
      *     {@link XMLGregorianCalendar }
      *     
      */
-    public XMLGregorianCalendar getRegnDtTm() {
-        return regnDtTm;
-    }
+    //public XMLGregorianCalendar getRegnDtTm() {
+     //   return regnDtTm;
+   // }
 
     /**
      * Sets the value of the regnDtTm property.
@@ -246,9 +248,9 @@ public class ProxyEnquiryInformation1 {
      *     {@link XMLGregorianCalendar }
      *     
      */
-    public void setRegnDtTm(XMLGregorianCalendar value) {
-        this.regnDtTm = value;
-    }
+   // public void setRegnDtTm(XMLGregorianCalendar value) {
+     //   this.regnDtTm = value;
+    //}
 
     /**
      * Gets the value of the preAuthrsd property.
@@ -258,9 +260,9 @@ public class ProxyEnquiryInformation1 {
      *     {@link Boolean }
      *     
      */
-    public Boolean isPreAuthrsd() {
-        return preAuthrsd;
-    }
+    //public Boolean isPreAuthrsd() {
+     //   return preAuthrsd;
+    //}
 
     /**
      * Sets the value of the preAuthrsd property.
@@ -270,9 +272,9 @@ public class ProxyEnquiryInformation1 {
      *     {@link Boolean }
      *     
      */
-    public void setPreAuthrsd(Boolean value) {
-        this.preAuthrsd = value;
-    }
+   // public void setPreAuthrsd(Boolean value) {
+     //   this.preAuthrsd = value;
+    //}
 
     /**
      * Gets the value of the splmtryData property.
@@ -282,12 +284,18 @@ public class ProxyEnquiryInformation1 {
      *     {@link BISupplementaryData1 }
      *     
      */
-    public List<BISupplementaryData1> getSplmtryData() {
+/*    public List<BISupplementaryData1> getSplmtryData() {
         if (splmtryData == null) {
         	splmtryData = new ArrayList<BISupplementaryData1>();
         }
         return splmtryData;
+    }*/
+
+    public BISupplementaryData1 getSplmtryData() {
+        return splmtryData;
     }
 
-
+    public void setSplmtryData(BISupplementaryData1 splmtryData) {
+        this.splmtryData = splmtryData;
+    }
 }
