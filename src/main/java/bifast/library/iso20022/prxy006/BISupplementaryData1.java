@@ -8,9 +8,6 @@
 
 package bifast.library.iso20022.prxy006;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -46,6 +43,7 @@ public class BISupplementaryData1 {
 
     @XmlElement(name = "PlcAndNm")
     protected String plcAndNm;
+
     @XmlElement(name = "Envlp", required = true)
     protected BISupplementaryDataEnvelope1 envlp;
 

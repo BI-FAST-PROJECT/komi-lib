@@ -35,13 +35,25 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "BISupplementaryDataEnvelope1", propOrder = {
-    "dtl"
+	"cstmr"
 })
 public class BISupplementaryDataEnvelope1 {
 
-    @XmlElement(name = "Dtl")
-    protected BISupplementaryDetail1 dtl;
+/*    @XmlElement(name = "Dtl")
+    protected BISupplementaryDetail1 dtl;*/
 
+	@XmlElement(name = "Cstmr")
+	protected BIAddtlCstmrInf cstmr;
+	public BIAddtlCstmrInf getCstmr() {
+		return cstmr;
+	}
+
+	public void setCstmr(BIAddtlCstmrInf value) {
+		this.cstmr = value;
+	}
+
+
+/*
 	public BISupplementaryDetail1 getDtl() {
 		return dtl;
 	}
@@ -49,6 +61,7 @@ public class BISupplementaryDataEnvelope1 {
 	public void setDtl(BISupplementaryDetail1 dtl) {
 		this.dtl = dtl;
 	}
+*/
 
 
 }

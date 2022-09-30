@@ -1,40 +1,17 @@
 package bifast.library.iso20022.service;
 
-import java.util.ArrayList;
-import java.util.GregorianCalendar;
-import java.util.List;
+import bifast.library.config.LibConfig;
+import bifast.library.iso20022.custom.BusinessMessage;
+import bifast.library.iso20022.prxy006.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import javax.xml.datatype.DatatypeConfigurationException;
 import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.XMLGregorianCalendar;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
-import bifast.library.config.LibConfig;
-import bifast.library.iso20022.custom.BusinessMessage;
-import bifast.library.iso20022.prxy006.AccountIdentification4Choice;
-import bifast.library.iso20022.prxy006.CashAccount40;
-import bifast.library.iso20022.prxy006.CashAccountType2ChoiceProxy;
-import bifast.library.iso20022.prxy006.GenericAccountIdentification1;
-
-import bifast.library.iso20022.prxy006.BIAddtlCstmrInf;
-import bifast.library.iso20022.prxy006.BISupplementaryData1;
-import bifast.library.iso20022.prxy006.BISupplementaryDataEnvelope1;
-import bifast.library.iso20022.prxy006.BISupplementaryDetail1;
-import bifast.library.iso20022.prxy006.BranchAndFinancialInstitutionIdentification5;
-import bifast.library.iso20022.prxy006.FinancialInstitutionIdentification8;
-import bifast.library.iso20022.prxy006.GenericFinancialIdentification1;
-import bifast.library.iso20022.prxy006.GroupHeader60;
-import bifast.library.iso20022.prxy006.OriginalGroupInformation3;
-import bifast.library.iso20022.prxy006.Party12Choice;
-import bifast.library.iso20022.prxy006.ProxyEnquiryAccount1;
-import bifast.library.iso20022.prxy006.ProxyEnquiryDefinition1;
-import bifast.library.iso20022.prxy006.ProxyEnquiryInformation1;
-import bifast.library.iso20022.prxy006.ProxyStatusChoice;
-import bifast.library.iso20022.prxy006.ProxyStatusCode;
-import bifast.library.iso20022.prxy006.ProxyEnquiryResponse1;
-import bifast.library.iso20022.prxy006.ProxyEnquiryResponseV01;
+import java.util.ArrayList;
+import java.util.GregorianCalendar;
+import java.util.List;
 
 
 @Service
@@ -145,7 +122,8 @@ public class Proxy006MessageService {
 					cashAccount40.setNm(data.getAccountName());
 					
 					AcctInf.setAcct(cashAccount40);
-	
+
+
 					BIAddtlCstmrInf bIAddtlCstmrInf = new BIAddtlCstmrInf();
 					bIAddtlCstmrInf.setId(data.getCstmrId());
 					bIAddtlCstmrInf.setTp(data.getCstmrTp());
@@ -154,15 +132,15 @@ public class Proxy006MessageService {
 					
 					///
 					BISupplementaryDataEnvelope1 biSupplementaryDataEnvelope1 =  new BISupplementaryDataEnvelope1();
-					biSupplementaryDataEnvelope1.setDtl(new BISupplementaryDetail1 ());
-					biSupplementaryDataEnvelope1.getDtl().setCstmr(bIAddtlCstmrInf);
+					//biSupplementaryDataEnvelope1.setDtl(new BISupplementaryDetail1 ());
+					 biSupplementaryDataEnvelope1.setCstmr(bIAddtlCstmrInf);
 
 					///
 					BISupplementaryData1 biSupplementaryData1 = new BISupplementaryData1();
 					biSupplementaryData1.setEnvlp(biSupplementaryDataEnvelope1);
 					///
-					proxyEnquiryInformation1.getSplmtryData().add(new BISupplementaryData1());
-					proxyEnquiryInformation1.getSplmtryData().get(0).setEnvlp(biSupplementaryDataEnvelope1);
+					//proxyEnquiryInformation1.getSplmtryData().add(new BISupplementaryData1());
+					proxyEnquiryInformation1.getSplmtryData().setEnvlp(biSupplementaryDataEnvelope1);
 					proxyEnquiryInformation1.setAcctInf(AcctInf);
 					Rspn.add(proxyEnquiryInformation1);
 			 }
