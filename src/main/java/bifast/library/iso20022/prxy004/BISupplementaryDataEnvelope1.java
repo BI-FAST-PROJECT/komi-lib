@@ -16,9 +16,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Java class for BI_SupplementaryDataEnvelope1 complex type.
- * 
+ *
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ *
  * <pre>
  * &lt;complexType name="BI_SupplementaryDataEnvelope1"&gt;
  *   &lt;complexContent&gt;
@@ -30,12 +30,12 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "BISupplementaryDataEnvelope1", propOrder = {
-    "cstmr"
+        "cstmr"
 })
 public class BISupplementaryDataEnvelope1 {
 
@@ -44,11 +44,11 @@ public class BISupplementaryDataEnvelope1 {
 
     /**
      * Gets the value of the cstmr property.
-     * 
+     *
      * @return
      *     possible object is
      *     {@link BIAddtlCstmrInf }
-     *     
+     *
      */
     public BIAddtlCstmrInf getCstmr() {
         return cstmr;
@@ -56,11 +56,11 @@ public class BISupplementaryDataEnvelope1 {
 
     /**
      * Sets the value of the cstmr property.
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link BIAddtlCstmrInf }
-     *     
+     *
      */
     public void setCstmr(BIAddtlCstmrInf value) {
         this.cstmr = value;

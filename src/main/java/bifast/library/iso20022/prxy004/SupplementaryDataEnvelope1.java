@@ -8,6 +8,8 @@
 
 package bifast.library.iso20022.prxy004;
 
+import bifast.library.iso20022.prxy004.BIAddtlCstmrInf;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -16,9 +18,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>Java class for BI_SupplementaryDataEnvelope1 complex type.
- * 
+ *
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ *
  * <pre>
  * &lt;complexType name="BI_SupplementaryDataEnvelope1"&gt;
  *   &lt;complexContent&gt;
@@ -30,17 +32,36 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "BI_SupplementaryDataEnvelope1", propOrder = {
-    "dtl"
+		"dtl",
+		"cstmr"
 })
 public class SupplementaryDataEnvelope1 {
 
-    @XmlElement(name = "Dtl")
-    protected BISupplementaryDataEnvelope1 dtl;
+	@XmlElement(name = "Dtl")
+	protected BISupplementaryDataEnvelope1 dtl;
+	@XmlElement(name = "Cstmr")
+	protected BIAddtlCstmrInf cstmr;
+
+	/**
+	 * Gets the value of the cstmr property.
+	 *
+	 * @return
+	 *     possible object is
+	 *     {@link bifast.library.iso20022.prxy004.BIAddtlCstmrInf }
+	 *
+	 */
+	public BIAddtlCstmrInf getCstmr() {
+		return cstmr;
+	}
+
+	public void setCstmr(BIAddtlCstmrInf value) {
+		this.cstmr = value;
+	}
 
 	public BISupplementaryDataEnvelope1 getDtl() {
 		return dtl;
