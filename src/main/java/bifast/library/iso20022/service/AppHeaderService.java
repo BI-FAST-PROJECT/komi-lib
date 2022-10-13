@@ -28,7 +28,7 @@ public class AppHeaderService {
 		fr.setFIId(new BranchAndFinancialInstitutionIdentification5());
 		fr.getFIId().setFinInstnId(new FinancialInstitutionIdentification8());
 		fr.getFIId().getFinInstnId().setOthr(new GenericFinancialIdentification1());
-		fr.getFIId().getFinInstnId().getOthr().setId("SIHBIDJ1");
+		fr.getFIId().getFinInstnId().getOthr().setId("MCORIDJA");
 		appHdr.setFr(fr);
 
 		Party9Choice to = new Party9Choice();
