@@ -43,8 +43,8 @@ public class Party12Choice {
     @XmlElement(name = "Agt")
     protected BranchAndFinancialInstitutionIdentification5 agt;
 
-    @XmlElement(name = "Acct")
-    protected CashAccount40 acct;
+    //@XmlElement(name = "Acct")
+    //protected CashAccount40 acct;
 
     /**
      * Gets the value of the agt property.
@@ -70,12 +70,12 @@ public class Party12Choice {
         this.agt = value;
     }
 
-	public CashAccount40 getAcct() {
-		return acct;
-	}
-
-	public void setAcct(CashAccount40 acct) {
-		this.acct = acct;
-	}
+//	public CashAccount40 getAcct() {
+//		return acct;
+//	}
+//
+//	public void setAcct(CashAccount40 acct) {
+//		this.acct = acct;
+//	}
 
 }
