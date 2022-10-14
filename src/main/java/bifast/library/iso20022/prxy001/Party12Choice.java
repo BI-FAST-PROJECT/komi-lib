@@ -36,7 +36,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Party12Choice", propOrder = {
     "agt",
-    "acct"
 })
 public class Party12Choice {
 

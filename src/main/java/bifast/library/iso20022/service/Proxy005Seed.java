@@ -7,6 +7,8 @@ public class Proxy005Seed {
 	private String trnType;
 	
 	private String id;
+
+	private String senderAccountNumber;
 	private String scndIdType;
 	private String scndIdValue;
 	
@@ -41,7 +43,12 @@ public class Proxy005Seed {
 	public void setScndIdValue(String scndIdValue) {
 		this.scndIdValue = scndIdValue;
 	}
-	
-    
-    
+
+	public String getSenderAccountNumber() {
+		return senderAccountNumber;
+	}
+
+	public void setSenderAccountNumber(String senderAccountNumber) {
+		this.senderAccountNumber = senderAccountNumber;
+	}
 }

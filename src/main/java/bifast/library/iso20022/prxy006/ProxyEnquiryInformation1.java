@@ -13,6 +13,8 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -78,11 +80,11 @@ public class ProxyEnquiryInformation1 {
    //@XmlElement(name = "SplmtryData")
    // protected List<BISupplementaryDataEnvelope1> splmtryData;
 
-    //@XmlElement(name = "SplmtryData")
-    //protected List<BISupplementaryData1> splmtryData;
-
     @XmlElement(name = "SplmtryData")
-    protected BISupplementaryData1 splmtryData;
+    protected List<BISupplementaryData1> splmtryData;
+
+    //@XmlElement(name = "SplmtryData")
+   // protected BISupplementaryData1 splmtryData;
 
     /**
      * Gets the value of the regnId property.
@@ -284,18 +286,20 @@ public class ProxyEnquiryInformation1 {
      *     {@link BISupplementaryData1 }
      *     
      */
-/*    public List<BISupplementaryData1> getSplmtryData() {
+   public List<BISupplementaryData1> getSplmtryData() {
         if (splmtryData == null) {
         	splmtryData = new ArrayList<BISupplementaryData1>();
         }
         return splmtryData;
-    }*/
-
-    public BISupplementaryData1 getSplmtryData() {
-        return splmtryData;
     }
 
-    public void setSplmtryData(BISupplementaryData1 splmtryData) {
-        this.splmtryData = splmtryData;
-    }
+//    public BISupplementaryData1 getSplmtryData() {
+//        return splmtryData;
+//    }
+//
+//    public void setSplmtryData(BISupplementaryData1 splmtryData) {
+//        this.splmtryData = splmtryData;
+//    }
+
+
 }

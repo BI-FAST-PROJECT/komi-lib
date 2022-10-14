@@ -132,15 +132,15 @@ public class Proxy006MessageService {
 					
 					///
 					BISupplementaryDataEnvelope1 biSupplementaryDataEnvelope1 =  new BISupplementaryDataEnvelope1();
-					//biSupplementaryDataEnvelope1.setDtl(new BISupplementaryDetail1 ());
-					 biSupplementaryDataEnvelope1.setCstmr(bIAddtlCstmrInf);
+					biSupplementaryDataEnvelope1.setDtl(new BISupplementaryDetail1 ());
+					//biSupplementaryDataEnvelope1.setCstmr(bIAddtlCstmrInf);
 
 					///
 					BISupplementaryData1 biSupplementaryData1 = new BISupplementaryData1();
 					biSupplementaryData1.setEnvlp(biSupplementaryDataEnvelope1);
 					///
-					//proxyEnquiryInformation1.getSplmtryData().add(new BISupplementaryData1());
-					proxyEnquiryInformation1.getSplmtryData().setEnvlp(biSupplementaryDataEnvelope1);
+					proxyEnquiryInformation1.getSplmtryData().add(new BISupplementaryData1());
+					//proxyEnquiryInformation1.getSplmtryData().setEnvlp(biSupplementaryDataEnvelope1);
 					proxyEnquiryInformation1.setAcctInf(AcctInf);
 					Rspn.add(proxyEnquiryInformation1);
 			 }
