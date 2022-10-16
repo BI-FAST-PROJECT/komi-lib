@@ -5,6 +5,7 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonRootName;
 
 import bifast.library.iso20022.head001.BusinessApplicationHeaderV01;
@@ -14,6 +15,7 @@ import bifast.library.iso20022.head001.BusinessApplicationHeaderV01;
 @JsonRootName(value = "BusMsg")
 @XmlRootElement(name = "BusMsg")
 @XmlAccessorType(XmlAccessType.FIELD)
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class BusinessMessage {
 
     @XmlElement(name = "AppHdr", required = true)

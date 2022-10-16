@@ -40,7 +40,7 @@ import javax.xml.bind.annotation.XmlType;
 public class GenericAccountIdentification1 {
 
     @XmlElement(name = "Id", required = true)
-    protected String id;
+    protected Long id;
 
     /**
      * Gets the value of the id property.
@@ -50,7 +50,7 @@ public class GenericAccountIdentification1 {
      *     {@link String }
      *     
      */
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
@@ -62,7 +62,7 @@ public class GenericAccountIdentification1 {
      *     {@link String }
      *     
      */
-    public void setId(String value) {
+    public void setId(Long value) {
         this.id = value;
     }
 

@@ -91,7 +91,7 @@ public class Proxy001MessageService {
 
 		proxy001.getRegn().setPrxy(new ProxyDefinition1());
 		proxy001.getRegn().getPrxy().setTp(seed.getProxyType());
-		proxy001.getRegn().getPrxy().setVal(seed.getProxyValue());
+		proxy001.getRegn().getPrxy().setVal(Long.valueOf((seed.getProxyValue())));
 
 
 		// PrxyRegn / +Regn / ++PrxyRegn
@@ -116,7 +116,7 @@ public class Proxy001MessageService {
 		proxy001.getRegn().getPrxyRegn().setAcct(new CashAccount40());
 		proxy001.getRegn().getPrxyRegn().getAcct().setId(new AccountIdentification4Choice ());;
 		proxy001.getRegn().getPrxyRegn().getAcct().getId().setOthr(new GenericAccountIdentification1());
-		proxy001.getRegn().getPrxyRegn().getAcct().getId().getOthr().setId(seed.getRegisterAccountNumber());
+		proxy001.getRegn().getPrxyRegn().getAcct().getId().getOthr().setId(Long.valueOf(seed.getRegisterAccountNumber()));
 
 		// PrxyRegn / +Regn / ++PrxyRegn / +++Acct / ++++Tp
 		if (!(null == seed.getRegisterAccountType())) {

@@ -43,8 +43,12 @@ public class ProxyDefinition1 {
 
     @XmlElement(name = "Tp", required = true)
     protected String tp;
+//    @XmlElement(name = "Val", required = true)
+//    protected String val;
+
     @XmlElement(name = "Val", required = true)
-    protected String val;
+    protected Long val;
+
 
     /**
      * Gets the value of the tp property.
@@ -78,20 +82,23 @@ public class ProxyDefinition1 {
      *     {@link String }
      *     
      */
-    public String getVal() {
-        return val;
-    }
+//    public String getVal() {
+//        return val;
+//    }
+//
+//    /**
+//     * Sets the value of the val property.
+//     *
+//     * @param value
+//     *     allowed object is
+//     *     {@link String }
+//     *
+//     */
+//    public void setVal(String value) {
+//        this.val = value;
+//    }
 
-    /**
-     * Sets the value of the val property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setVal(String value) {
-        this.val = value;
+    public void setVal(Long val) {
+        this.val = val;
     }
-
 }

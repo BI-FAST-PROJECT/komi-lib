@@ -58,7 +58,7 @@ public class Proxy003MessageService {
 		proxy003.getGrpHdr().getMsgSndr().setAcct(new CashAccount40());
 		proxy003.getGrpHdr().getMsgSndr().getAcct().setId(new AccountIdentification4Choice());
 		proxy003.getGrpHdr().getMsgSndr().getAcct().getId().setOthr(new GenericAccountIdentification1());
-		proxy003.getGrpHdr().getMsgSndr().getAcct().getId().getOthr().setId(seed.getSndrAccountNumber());
+		proxy003.getGrpHdr().getMsgSndr().getAcct().getId().getOthr().setId(Long.valueOf(seed.getSndrAccountNumber()));
 		
 		// Lookup / PrxyOnly
 		proxy003.setLookUp(new ProxyLookUpChoice1());
@@ -70,7 +70,7 @@ public class Proxy003MessageService {
 		// Lookup / PrxyOnly /PrxyRtrvl
 		proxy003.getLookUp().getPrxyOnly().setPrxyRtrvl(new ProxyDefinition1());
 		proxy003.getLookUp().getPrxyOnly().getPrxyRtrvl().setTp(seed.getProxyType());
-		proxy003.getLookUp().getPrxyOnly().getPrxyRtrvl().setVal(seed.getProxyValue());
+		proxy003.getLookUp().getPrxyOnly().getPrxyRtrvl().setVal(Long.valueOf(seed.getProxyValue()));
 		
 		return proxy003;
 	}

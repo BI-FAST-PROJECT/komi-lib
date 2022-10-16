@@ -47,8 +47,11 @@ public class BIAddtlCstmrInf {
 
     @XmlElement(name = "Tp")
     protected String tp;
+//    @XmlElement(name = "Id")
+//    protected String id;
+
     @XmlElement(name = "Id")
-    protected String id;
+    protected Long id;
     @XmlElement(name = "RsdntSts")
     protected String rsdntSts;
     @XmlElement(name = "TwnNm")
@@ -78,6 +81,10 @@ public class BIAddtlCstmrInf {
         this.tp = value;
     }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     /**
      * Gets the value of the id property.
      * 
@@ -86,9 +93,11 @@ public class BIAddtlCstmrInf {
      *     {@link String }
      *     
      */
-    public String getId() {
-        return id;
-    }
+
+
+   // public String getId() {
+        //return id;
+    //}
 
     /**
      * Sets the value of the id property.
@@ -98,9 +107,9 @@ public class BIAddtlCstmrInf {
      *     {@link String }
      *     
      */
-    public void setId(String value) {
-        this.id = value;
-    }
+    //public void setId(String value) {
+     //   this.id = value;
+    //}
 
     /**
      * Gets the value of the rsdntSts property.
