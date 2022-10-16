@@ -74,6 +74,10 @@ public class ProxyDefinition1 {
         this.tp = value;
     }
 
+    public Long getVal() {
+        return val;
+    }
+
     /**
      * Gets the value of the val property.
      * 
@@ -97,6 +101,7 @@ public class ProxyDefinition1 {
 //    public void setVal(String value) {
 //        this.val = value;
 //    }
+
 
     public void setVal(Long val) {
         this.val = val;
