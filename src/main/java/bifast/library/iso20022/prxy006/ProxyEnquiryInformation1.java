@@ -80,8 +80,8 @@ public class ProxyEnquiryInformation1 {
    //@XmlElement(name = "SplmtryData")
    // protected List<BISupplementaryDataEnvelope1> splmtryData;
 
-    @XmlElement(name = "SplmtryData")
-    protected List<BISupplementaryData1> splmtryData;
+   // @XmlElement(name = "SplmtryData")
+    //protected List<BISupplementaryData1> splmtryData;
 
     //@XmlElement(name = "SplmtryData")
    // protected BISupplementaryData1 splmtryData;
@@ -286,12 +286,12 @@ public class ProxyEnquiryInformation1 {
      *     {@link BISupplementaryData1 }
      *     
      */
-   public List<BISupplementaryData1> getSplmtryData() {
-        if (splmtryData == null) {
-        	splmtryData = new ArrayList<BISupplementaryData1>();
-        }
-        return splmtryData;
-    }
+//   public List<BISupplementaryData1> getSplmtryData() {
+//        if (splmtryData == null) {
+//        	splmtryData = new ArrayList<BISupplementaryData1>();
+//        }
+//        return splmtryData;
+//    }
 
 //    public BISupplementaryData1 getSplmtryData() {
 //        return splmtryData;

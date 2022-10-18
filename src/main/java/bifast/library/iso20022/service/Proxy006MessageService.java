@@ -139,7 +139,7 @@ public class Proxy006MessageService {
 					BISupplementaryData1 biSupplementaryData1 = new BISupplementaryData1();
 					biSupplementaryData1.setEnvlp(biSupplementaryDataEnvelope1);
 					///
-					proxyEnquiryInformation1.getSplmtryData().add(new BISupplementaryData1());
+					//proxyEnquiryInformation1.getSplmtryData().add(new BISupplementaryData1());
 					//proxyEnquiryInformation1.getSplmtryData().setEnvlp(biSupplementaryDataEnvelope1);
 					proxyEnquiryInformation1.setAcctInf(AcctInf);
 					Rspn.add(proxyEnquiryInformation1);
