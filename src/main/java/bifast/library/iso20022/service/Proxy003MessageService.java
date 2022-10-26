@@ -70,7 +70,7 @@ public class Proxy003MessageService {
 		// Lookup / PrxyOnly /PrxyRtrvl
 		proxy003.getLookUp().getPrxyOnly().setPrxyRtrvl(new ProxyDefinition1());
 		proxy003.getLookUp().getPrxyOnly().getPrxyRtrvl().setTp(seed.getProxyType());
-		proxy003.getLookUp().getPrxyOnly().getPrxyRtrvl().setVal(Long.valueOf(seed.getProxyValue()));
+		proxy003.getLookUp().getPrxyOnly().getPrxyRtrvl().setVal(seed.getProxyValue());
 		
 		return proxy003;
 	}

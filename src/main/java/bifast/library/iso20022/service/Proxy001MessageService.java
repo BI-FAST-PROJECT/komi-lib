@@ -91,7 +91,7 @@ public class Proxy001MessageService {
 
 		proxy001.getRegn().setPrxy(new ProxyDefinition1());
 		proxy001.getRegn().getPrxy().setTp(seed.getProxyType());
-		proxy001.getRegn().getPrxy().setVal(Long.valueOf((seed.getProxyValue())));
+		proxy001.getRegn().getPrxy().setVal(seed.getProxyValue());
 
 
 		// PrxyRegn / +Regn / ++PrxyRegn

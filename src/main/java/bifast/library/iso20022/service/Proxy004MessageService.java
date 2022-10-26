@@ -77,7 +77,7 @@ public class Proxy004MessageService {
 		response.getLkUpRspn().setOrgnlPrxyRtrvl(new ProxyDefinition1());
 
 		response.getLkUpRspn().getOrgnlPrxyRtrvl().setTp(orgnlMessage.getDocument().getPrxyLookUp().getLookUp().getPrxyOnly().getPrxyRtrvl().getTp());
-		response.getLkUpRspn().getOrgnlPrxyRtrvl().setVal(Long.valueOf(orgnlMessage.getDocument().getPrxyLookUp().getLookUp().getPrxyOnly().getPrxyRtrvl().getVal()));
+		response.getLkUpRspn().getOrgnlPrxyRtrvl().setVal(orgnlMessage.getDocument().getPrxyLookUp().getLookUp().getPrxyOnly().getPrxyRtrvl().getVal());
 		 
 		//+LkUpRspn/++RegnRspn
 		response.getLkUpRspn().setRegnRspn(new ProxyLookUpRegistration1());
